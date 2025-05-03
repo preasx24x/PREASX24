@@ -1,1 +1,97 @@
-u
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preasx24 – Founder of DTECH</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at center, #010922 40%, #000000);
+      color: #00eaff;
+      overflow-x: hidden;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      background: url('cyberpunk_bg.png') center/cover no-repeat;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .hero-content {
+      z-index: 2;
+      position: relative;
+      padding: 2rem;
+    }
+    .hero img {
+      height: 120px;
+      margin: 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 0.5rem 0;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    .btn-section {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn {
+      padding: 1rem 2rem;
+      background-color: #00eaff;
+      color: #000;
+      font-weight: 800;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s ease-in-out;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .btn {
+        padding: 0.8rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="dtech_logo.png" alt="DTECH Logo" />
+      <img src="preasx24_avatar.png" alt="Preasx24 Portrait" />
+      <h1>@Preasx24</h1>
+      <h2>The Visionary Behind DTECH</h2>
+      <div class="btn-section">
+        <a class="btn" href="#about">About</a>
+        <a class="btn" href="#dtech-services">DTECH Services</a>
+        <a class="btn" href="#dtech-info">DTECH Info</a>
+        <a class="btn" href="#dtech-hq">DTECH HQ</a>
+        <a class="btn" href="#dtech-general">DTECH General</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </div>
+  </section>
+</body>
+  </html>
