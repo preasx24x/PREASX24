@@ -1,54 +1,53 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Image Resizer</title>
+  <meta charset="UTF-8">
+  <title>PNG Size Booster</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 20px; }
-    input, button { margin: 10px; }
-    canvas { display: none; }
+    body { font-family: Arial; text-align: center; padding: 30px; background-color: #111; color: white; }
+    input, button { margin: 10px; padding: 10px; }
   </style>
 </head>
 <body>
-  <h1>Image Resizer</h1>
-  <input type="file" id="imageInput" accept="image/*" />
-  <div id="downloadLinks"></div>  <script>
-    const sizes = [48, 72, 96, 144, 192];
+  <h1>Increase PNG File Size</h1>
+  <input type="file" id="fileInput" accept="image/png">
+  <br>
+  <button onclick="inflatePNG()">Increase Size</button>
+  <br>
+  <a id="downloadLink" style="display:none;" download="inflated.png">Download Inflated PNG</a>
 
-    document.getElementById('imageInput').addEventListener('change', function(event) {
-      const file = event.target.files[0];
-      if (!file) return;
+  <script>
+    function inflatePNG() {
+      const fileInput = document.getElementById('fileInput');
+      const downloadLink = document.getElementById('downloadLink');
 
-      const img = new Image();
+      if (!fileInput.files[0]) {
+        alert("Please select a PNG file.");
+        return;
+      }
+
       const reader = new FileReader();
+      reader.onload = function (e) {
+        let dataURL = e.target.result;
 
-      reader.onload = function(e) {
-        img.src = e.target.result;
+        // Convert base64 to binary
+        let base64 = dataURL.split(',')[1];
+        let binary = atob(base64);
+
+        // Add dummy data to increase size by 17MB
+        let padding = 'A'.repeat(17 * 1024 * 1024); // 17MB
+        binary += padding;
+
+        // Convert back to base64
+        let inflatedBase64 = btoa(binary);
+        let newDataURL = "data:image/png;base64," + inflatedBase64;
+
+        downloadLink.href = newDataURL;
+        downloadLink.style.display = 'inline-block';
+        downloadLink.innerText = "Download Inflated PNG";
       };
-      reader.readAsDataURL(file);
-
-      img.onload = function() {
-        const downloadLinks = document.getElementById('downloadLinks');
-        downloadLinks.innerHTML = '';
-
-        sizes.forEach(size => {
-          const canvas = document.createElement('canvas');
-          canvas.width = size;
-          canvas.height = size;
-
-          const ctx = canvas.getContext('2d');
-          ctx.drawImage(img, 0, 0, size, size);
-
-          canvas.toBlob(blob => {
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = `resized_${size}x${size}.png`;
-            link.textContent = `Download ${size}x${size}`;
-            link.style.display = 'block';
-            downloadLinks.appendChild(link);
-          }, 'image/png');
-        });
-      };
-    });
-  </script></body>
+      reader.readAsDataURL(fileInput.files[0]);
+    }
+  </script>
+</body>
 </html>
