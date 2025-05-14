@@ -1,53 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>PNG Size Booster</title>
-  <style>
-    body { font-family: Arial; text-align: center; padding: 30px; background-color: #111; color: white; }
-    input, button { margin: 10px; padding: 10px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTECH Quiz Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+        }
+
+        .quiz-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        #question {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #fdbb2d;
+            font-weight: bold;
+        }
+
+        .options {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .option-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .option-button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        .option-button:active {
+            background-color: #1e7e34;
+        }
+
+        .disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #timer {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #fdbb2d;
+        }
+
+        .no-select {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .alert {
+            padding: 10px;
+            background-color: #ff3b30;
+            color: white;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .completed {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        #ranking {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        #submit-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        .input-code {
+            margin: 20px 0;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-  <h1>Increase PNG File Size</h1>
-  <input type="file" id="fileInput" accept="image/png">
-  <br>
-  <button onclick="inflatePNG()">Increase Size</button>
-  <br>
-  <a id="downloadLink" style="display:none;" download="inflated.png">Download Inflated PNG</a>
+    <div class="quiz-container">
+        <h1>DTECH Quiz Game</h1>
+        <div id="ranking">
+            <strong>Top Rankings:</strong>
+            <p>No. 1: User1 - 100pts</p>
+            <p>No. 2: User2 - 90pts</p>
+            <p>No. 3: User3 - 85pts</p>
+        </div>
+        <div class="alert" id="alert"></div>
+        <div id="question" class="no-select"></div>
+        <div class="options">
+            <button id="optionA" class="option-button no-select" onclick="checkAnswer('A')"></button>
+            <button id="optionB" class="option-button no-select" onclick="checkAnswer('B')"></button>
+            <button id="optionC" class="option-button no-select" onclick="checkAnswer('C')"></button>
+            <button id="optionD" class="option-button no-select" onclick="checkAnswer('D')"></button>
+        </div>
+        <div id="timer"></div>
+        <div id="level" class="no-select"></div>
+        <div id="submit-form">
+            <input type="text" id="user-code" class="input-code" placeholder="Enter code to continue..." />
+            <button id="submit-button" onclick="submitRanking()">Submit Ranking</button>
+        </div>
+    </div>
 
-  <script>
-    function inflatePNG() {
-      const fileInput = document.getElementById('fileInput');
-      const downloadLink = document.getElementById('downloadLink');
+    <script>
+        // Initialize variables
+        let currentQuestion = 0;
+        let level = 1;
+        let score = 0;
+        let timer = 60;
+        let timerInterval;
+        let questions = [
+            {
+                question: "What is the capital city of France?",
+                options: { A: "Madrid", B: "Paris", C: "Berlin", D: "Rome" },
+                answer: "B"
+            },
+            {
+                question: "Who wrote the play 'Romeo and Juliet'?",
+                options: { A: "Charles Dickens", B: "William Shakespeare", C: "J.K. Rowling", D: "Mark Twain" },
+                answer: "B"
+            },
+            {
+                question: "What is the largest planet in our solar system?",
+                options: { A: "Earth", B: "Mars", C: "Jupiter", D: "Venus" },
+                answer: "C"
+            },
+            {
+                question: "Which element has the chemical symbol 'O'?",
+                options: { A: "Oxygen", B: "Osmium", C: "Ozone", D: "Gold" },
+                answer: "A"
+            }
+        ];
 
-      if (!fileInput.files[0]) {
-        alert("Please select a PNG file.");
-        return;
-      }
+        // Shuffle questions randomly
+        function shuffleQuestions() {
+            for (let i = questions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [questions[i], questions[j]] = [questions[j], questions[i]];
+            }
+        }
 
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        let dataURL = e.target.result;
+        shuffleQuestions(); // Shuffle the questions
 
-        // Convert base64 to binary
-        let base64 = dataURL.split(',')[1];
-        let binary = atob(base64);
+        // Disable text selection (prevent copy)
+        document.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+        document.addEventListener("keydown", function (e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'v')) { e.preventDefault(); }
+        });
 
-        // Add dummy data to increase size by 17MB
-        let padding = 'A'.repeat(17 * 1024 * 1024); // 17MB
-        binary += padding;
+        // Load question
+        function loadQuestion() {
+            const questionData = questions[currentQuestion];
+            document.getElementById("question").innerText = questionData.question;
+            document.getElementById("optionA").innerText = questionData.options.A;
+            document.getElementById("optionB").innerText = questionData.options.B;
+            document.getElementById("optionC").innerText = questionData.options.C;
+            document.getElementById("optionD").innerText = questionData.options.D;
+            document.getElementById("level").innerText = `Level ${level}`;
+            startTimer();
+        }
 
-        // Convert back to base64
-        let inflatedBase64 = btoa(binary);
-        let newDataURL = "data:image/png;base64," + inflatedBase64;
+        // Start timer
+        function startTimer() {
+            document.getElementById("timer").innerText = "Time Left: " + timer + "s";
+            timerInterval = setInterval(function () {
+                timer--;
+                document.getElementById("timer").innerText = "Time Left: " + timer + "s";
+                if (timer <= 0) {
+                    clearInterval(timerInterval);
+                    showAlert("Time's up! Moving to the next question.");
+                    nextQuestion();
+                }
+            }, 1000);
+        }
 
-        downloadLink.href = newDataURL;
-        downloadLink.style.display = 'inline-block';
-        downloadLink.innerText = "Download Inflated PNG";
-      };
-      reader.readAsDataURL(fileInput.files[0]);
-    }
-  </script>
-</body>
-</html>
+        // Check answer
+        function checkAnswer(selectedOption) {
+            const questionData = questions[currentQuestion];
+            const isCorrect = selectedOption === questionData.answer;
+
+            if (isCorrect) {
+                score += 10; // Increment score for correct answer
+                showAlert("Correct!", "success");
+            } else {
+                showAlert(`Incorrect! The correct answer is ${questionData.answer}`, "error");
+            }
+            level++; // Increase level after every answer
+            clearInterval(timerInterval);
+            nextQuestion();
+        }
+
+        // Show alert
+        function showAlert(message, type = "error") {
+            const alertBox = document.getElementById("alert");
+            alertBox.innerText = message;
+            alertBox.style.display = "block";
+            alertBox.style.backgroundColor = type === "success" ? "#28a745" : "#ff3b30";
+            setTimeout(() => { alertBox.style.display = "none"; }, 2000);
+        }
+
+        // Move to next question
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                timer = 60; // Reset timer
+                loadQuestion();
+            } else {
+                document.getElementById("question").innerHTML = "<span class='completed'>You've completed all questions! Well
