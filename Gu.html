@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Resizer</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 20px; }
+    input, button { margin: 10px; }
+    canvas { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Image Resizer</h1>
+  <input type="file" id="imageInput" accept="image/*" />
+  <div id="downloadLinks"></div>  <script>
+    const sizes = [48, 72, 96, 144, 192];
+
+    document.getElementById('imageInput').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const img = new Image();
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+
+      img.onload = function() {
+        const downloadLinks = document.getElementById('downloadLinks');
+        downloadLinks.innerHTML = '';
+
+        sizes.forEach(size => {
+          const canvas = document.createElement('canvas');
+          canvas.width = size;
+          canvas.height = size;
+
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, size, size);
+
+          canvas.toBlob(blob => {
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `resized_${size}x${size}.png`;
+            link.textContent = `Download ${size}x${size}`;
+            link.style.display = 'block';
+            downloadLinks.appendChild(link);
+          }, 'image/png');
+        });
+      };
+    });
+  </script></body>
+</html>
