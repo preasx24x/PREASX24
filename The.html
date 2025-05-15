@@ -14,41 +14,39 @@
   <h1>Search Past Papers</h1>
   <input type="text" id="search" placeholder="e.g. afrikaans 2024 p1">
 
-  <div class="result" id="results"></div>
+  <div class="result" id="results">Loading...</div>
 
   <script>
     let papers = [];
 
-    // Load JSON from the local file
     fetch('papers.json')
       .then(res => res.json())
-      .then(data => { papers = data; });
+      .then(data => {
+        papers = data;
+        document.getElementById("results").innerHTML = "<p>Start typing to search.</p>";
 
-    // Fuzzy matching function
-    function fuzzyMatch(query, text) {
-      const keywords = query.toLowerCase().split(" ");
-      const fullText = text.toLowerCase();
-      return keywords.every(kw => fullText.includes(kw));
-    }
+        document.getElementById("search").addEventListener("input", function () {
+          const query = this.value.trim().toLowerCase();
+          if (!query) {
+            document.getElementById("results").innerHTML = "<p>Start typing to search.</p>";
+            return;
+          }
 
-    // Search handler
-    document.getElementById("search").addEventListener("input", function () {
-      const query = this.value.trim();
-      if (!query) {
-        document.getElementById("results").innerHTML = "";
-        return;
-      }
+          const filtered = papers.filter(p => query.split(" ").every(word => p.name.toLowerCase().includes(word)));
+          const results = filtered.map(p => `
+            <div class="paper">
+              <strong>${p.name}</strong><br>
+              <a href="${p.file}" download>Download PDF</a>
+            </div>
+          `).join("");
 
-      const filtered = papers.filter(p => fuzzyMatch(query, p.name));
-      const results = filtered.map(p => `
-        <div class="paper">
-          <strong>${p.name}</strong><br>
-          <a href="${p.file}" download>Download PDF</a>
-        </div>
-      `).join("");
-
-      document.getElementById("results").innerHTML = results || "<p>No matches found.</p>";
-    });
+          document.getElementById("results").innerHTML = results || "<p>No matches found.</p>";
+        });
+      })
+      .catch(err => {
+        document.getElementById("results").innerHTML = "<p>Error loading papers.json</p>";
+        console.error(err);
+      });
   </script>
 </body>
 </html>
