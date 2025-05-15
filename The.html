@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Past Papers Search</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      background-size: 200% 200%;
-      animation: bgShift 10s ease infinite;
-      color: #fff;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
-    @keyframes bgShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(ellipse at top, #0d0d0d, #000);
+      color: #ffffff;
+      overflow-x: hidden;
     }
 
     header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       padding: 10px 20px;
-      box-shadow: 0 0 10px #00e5ff;
+      box-shadow: 0 0 20px #2196f3;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     header .left {
@@ -35,38 +33,41 @@
     }
 
     .logo {
-      height: 40px;
+      height: 45px;
+      filter: drop-shadow(0 0 8px #00e5ff);
     }
 
     .slogan {
       font-size: 14px;
       font-weight: 500;
-      color: #ccc;
+      color: #cfd8dc;
+      text-shadow: 0 0 4px #00e5ff;
     }
 
-    .support-button {
-      background: #00bcd4;
+    .support-button, .question-button {
+      background: linear-gradient(135deg, #00e5ff, #1e88e5);
       color: white;
       border: none;
       padding: 10px 16px;
-      border-radius: 6px;
+      border-radius: 30px;
       cursor: pointer;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 0 10px #00e5ff;
-      transition: 0.3s;
+      box-shadow: 0 0 15px #00e5ff;
+      transition: transform 0.2s, box-shadow 0.3s;
     }
 
-    .support-button:hover {
-      background: #00e5ff;
+    .support-button:hover, .question-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00e5ff;
     }
 
     h1 {
       text-align: center;
       margin-top: 40px;
       color: #00e5ff;
-      font-size: 2em;
-      text-shadow: 0 0 10px #00e5ff;
+      font-size: 32px;
+      text-shadow: 0 0 10px #2196f3;
     }
 
     #search {
@@ -76,70 +77,61 @@
       width: 90%;
       padding: 14px;
       font-size: 16px;
-      border: 2px solid #00e5ff;
-      border-radius: 8px;
-      background: #000;
+      border: none;
+      border-radius: 50px;
+      outline: none;
+      box-shadow: 0 0 15px #00e5ff;
+      background: #1c1c1c;
       color: #fff;
+      text-align: center;
     }
 
     .result {
       max-width: 700px;
-      margin: 0 auto;
+      margin: 30px auto;
       padding: 20px;
     }
 
     .paper {
-      background: rgba(0, 0, 0, 0.7);
-      border-left: 5px solid #00e5ff;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px #00e5ff40;
+      background: #1a1a1a;
+      border-left: 6px solid #00e5ff;
+      padding: 20px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #00e5ff55;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .paper:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px #00e5ffaa;
     }
 
     .paper a {
-      color: #03e9f4;
-      font-weight: bold;
+      color: #4fc3f7;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
-      background: #000;
-      padding: 10px 14px;
-      border-radius: 6px;
-      border: 1px solid #03e9f4;
-      box-shadow: 0 0 10px #03e9f4;
-      transition: 0.3s;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
     }
 
     .paper a:hover {
-      background: #03e9f4;
-      color: #000;
+      text-decoration: underline;
+      color: #00bcd4;
     }
 
     p {
       text-align: center;
-      color: #ccc;
+      color: #aaa;
     }
 
-    /* Ask a Question Button */
-    .question-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #1de9b6;
-      color: #000;
-      padding: 12px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 15px #1de9b6;
-      transition: 0.3s ease;
-      z-index: 999;
+    .extra-button-container {
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    .question-btn:hover {
-      background: #00e5ff;
-      box-shadow: 0 0 25px #00e5ff;
+    .question-button {
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -157,10 +149,25 @@
 
   <div class="result" id="results">Loading...</div>
 
-  <a class="question-btn" href="https://info.dtech24.co.za" target="_blank">Ask a Question</a>
+  <div class="extra-button-container">
+    <a href="https://info.dtech24.co.za" class="question-button" target="_blank">Need Help or Can't Find a Paper?</a>
+  </div>
 
   <script>
     let papers = [];
+
+    function handleDownload(fileUrl) {
+      // Open the ad in a new tab
+      window.open("https://cafewarriors.com/spymr251ew?key=ce76edf7e5c6e4907177e712dc143365", "_blank");
+
+      // Create a temporary link to download the PDF
+      const a = document.createElement('a');
+      a.href = fileUrl;
+      a.download = '';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
 
     fetch('papers.json')
       .then(res => res.json())
@@ -175,14 +182,11 @@
             return;
           }
 
-          const filtered = papers.filter(p =>
-            query.split(" ").every(word => p.name.toLowerCase().includes(word))
-          );
-
+          const filtered = papers.filter(p => query.split(" ").every(word => p.name.toLowerCase().includes(word)));
           const results = filtered.map(p => `
             <div class="paper">
               <strong>${p.name}</strong><br>
-              <a href="${p.file}" download onclick="window.open('${p.file}', '_blank')">Download PDF</a>
+              <a href="#" onclick="handleDownload('${p.file}'); return false;">Download PDF</a>
             </div>
           `).join("");
 
@@ -195,4 +199,4 @@
       });
   </script>
 </body>
-</html>
+  </html>
