@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Past Papers Search</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f7f7f7; }
+    input { width: 100%; padding: 10px; margin-top: 20px; }
+    .result { margin-top: 20px; }
+    .paper { padding: 10px; background: #fff; border: 1px solid #ccc; margin-bottom: 10px; }
+    .paper a { text-decoration: none; color: #007bff; }
+  </style>
+</head>
+<body>
+  <h1>Search Past Papers</h1>
+  <input type="text" id="search" placeholder="e.g. maths 2021 term 1">
+
+  <div class="result" id="results"></div>
+
+  <script>
+    let papers = [];
+
+    fetch('papers.json')
+      .then(res => res.json())
+      .then(data => { papers = data; });
+
+    document.getElementById("search").addEventListener("input", function() {
+      const query = this.value.toLowerCase();
+      const filtered = papers.filter(p => p.name.toLowerCase().includes(query));
+      const results = filtered.map(p => `
+        <div class="paper">
+          <strong>${p.name}</strong><br>
+          <a href="${p.file}" download>Download PDF</a>
+        </div>
+      `).join("");
+
+      document.getElementById("results").innerHTML = results || "<p>No matches found.</p>";
+    });
+  </script>
+</body>
+</html>
