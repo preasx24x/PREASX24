@@ -44,7 +44,7 @@
       text-shadow: 0 0 4px #00e5ff;
     }
 
-    .support-button, .question-button {
+    .support-button, .question-button, .nav-button {
       background: linear-gradient(135deg, #00e5ff, #1e88e5);
       color: white;
       border: none;
@@ -55,9 +55,11 @@
       font-weight: bold;
       box-shadow: 0 0 15px #00e5ff;
       transition: transform 0.2s, box-shadow 0.3s;
+      margin: 10px 8px;
+      display: inline-block;
     }
 
-    .support-button:hover, .question-button:hover {
+    .support-button:hover, .question-button:hover, .nav-button:hover {
       transform: scale(1.05);
       box-shadow: 0 0 25px #00e5ff;
     }
@@ -125,13 +127,21 @@
       color: #aaa;
     }
 
-    .extra-button-container {
+    .extra-button-container, .nav-buttons {
       text-align: center;
-      margin-bottom: 40px;
+      margin: 20px auto;
     }
 
-    .question-button {
-      margin-top: 20px;
+    .info-box {
+      max-width: 700px;
+      margin: 10px auto 30px;
+      background: #1c1c1c;
+      padding: 20px;
+      border-left: 6px solid #00e5ff;
+      border-radius: 12px;
+      color: #ccc;
+      text-align: center;
+      box-shadow: 0 0 12px #00e5ff55;
     }
   </style>
 </head>
@@ -145,7 +155,12 @@
   </header>
 
   <h1>Search Past Papers</h1>
-  <input type="text" id="search" placeholder="e.g. Afrikaans 2024 P1">
+
+  <div class="info-box">
+    Includes 2020–2024 June & Nov exams. Memos start with ‘MG’.
+  </div>
+
+  <input type="text" id="search" placeholder="e.g. Afrikaans 2023 P1">
 
   <div class="result" id="results">Loading...</div>
 
@@ -153,14 +168,21 @@
     <a href="https://info.dtech24.co.za" class="question-button" target="_blank">Need Help or Can't Find a Paper?</a>
   </div>
 
+  <div class="nav-buttons">
+    <a href="2015-2019.html" class="nav-button">Grade 12 June & Nov (2015–2019)</a>
+    <a href="grade12-non-exams.html" class="nav-button">Grade 12 Non-Exam Papers</a>
+    <a href="grade11.html" class="nav-button">Grade 11</a>
+    <a href="grade10.html" class="nav-button">Grade 10</a>
+    <a href="grade9.html" class="nav-button">Grade 9</a>
+    <a href="grade8.html" class="nav-button">Grade 8</a>
+  </div>
+
   <script>
     let papers = [];
 
     function handleDownload(fileUrl) {
-      // Open the ad in a new tab
       window.open("https://cafewarriors.com/spymr251ew?key=ce76edf7e5c6e4907177e712dc143365", "_blank");
 
-      // Create a temporary link to download the PDF
       const a = document.createElement('a');
       a.href = fileUrl;
       a.download = '';
@@ -199,4 +221,4 @@
       });
   </script>
 </body>
-  </html>
+</html>
