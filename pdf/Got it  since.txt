@@ -1,0 +1,84 @@
+Got it — since you're using a school computer and want to avoid installing or downloading extra software, here are lighter, browser-based or no-install options to help you fetch and download files (like PDFs) from a website:
+
+
+---
+
+1. Bookmarklet Method – “Get all links”
+
+You can use a simple JavaScript bookmarklet in Chrome to extract all downloadable links (like PDFs) from a page:
+
+How to set it up:
+
+1. Bookmark any page
+
+
+2. Right-click the bookmark > Edit
+
+
+3. Change the URL to this:
+
+
+
+javascript:(function(){var links=document.getElementsByTagName('a');for(var i=0;i<links.length;i++){var href=links[i].href;if(href.match(/\.(pdf|zip|docx|xlsx|mp3)$/i)){window.open(href);}}})();
+
+4. Visit a webpage with downloadable files
+
+
+5. Click your bookmark — it will open all matching files in new tabs, ready to save
+
+
+
+> You can customize the file types in the match() part.
+
+
+
+
+---
+
+2. Use an Online Tool – No Install
+
+Example:
+
+https://tools.webdevpuneet.com/extract-all-links/
+or
+https://www.websiteseochecker.com/extract-links/
+
+Paste the URL of the webpage
+
+It will extract all links (including direct file links)
+
+You can then copy and paste the PDF links into your browser or download them
+
+
+
+---
+
+3. Developer Tools Method (Built into Chrome)
+
+1. Open the website with downloadable content
+
+
+2. Press F12 (or right-click → Inspect)
+
+
+3. Go to the Console tab
+
+
+4. Paste this snippet:
+
+
+
+Array.from(document.querySelectorAll('a')).map(a => a.href).filter(href => href.endsWith('.pdf'))
+
+5. Press Enter — it’ll list all PDF links, which you can right-click and download manually
+
+
+
+
+---
+
+Best for You:
+
+If you're just trying to get PDFs or assignments from a page, the bookmarklet + online link extractor options are best — no downloads, fully browser-based.
+
+Let me know the site you're trying to get files from, and I can help you extract them.
