@@ -1,0 +1,816 @@
+{
+    "name": "Bachelor of Psychology",
+    "code": "BPsych",
+    "minAPS": 23,
+    "requirements": {
+      "English": 4,
+      "Additional Language": "3 or 5",
+      "Mathematics or Mathematical Literacy": 4
+    },
+    "jobs": [
+      "Psychometrist",
+      "Trauma Counsellor",
+      "Employee Assistance Practitioner",
+      "Guidance Counsellor",
+      "Criminologist",
+      "Police",
+      "Crime Scene Expert",
+      "Correctional Officer",
+      "Metro Police",
+      "Private Investigator"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Psychology (Extended Curriculum Programme)",
+    "code": "BPsych-ECP",
+    "minAPS": 22,
+    "requirements": {
+      "English": 4,
+      "Additional Language": "2 or 4",
+      "Mathematics or Mathematical Literacy": 4
+    },
+    "jobs": [
+      "Psychometrist",
+      "Trauma Counsellor",
+      "Employee Assistance Practitioner",
+      "Guidance Counsellor",
+      "Criminologist",
+      "Police",
+      "Crime Scene Expert",
+      "Correctional Officer",
+      "Metro Police",
+      "Private Investigator"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Arts in Cultural Studies",
+    "code": "BA-CulStud",
+    "minAPS": 23,
+    "requirements": {
+      "English": 4,
+      "Additional Language": "3 or 5",
+      "Mathematics or Mathematical Literacy": 4
+    },
+    "jobs": [
+      "Development Officer",
+      "Cultural Officer",
+      "Heritage Officer",
+      "Museum Curator",
+      "Records Officer",
+      "Knowledge Management Officer",
+      "Community Officer"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Social Science in Industrial Sociology & Labour Studies",
+    "code": "BSocSci-Labour",
+    "minAPS": 23,
+    "requirements": {
+      "English": 4,
+      "Additional Language": "3 or 5",
+      "Mathematics or Mathematical Literacy": 4
+    },
+    "jobs": [
+      "Labour Relations Specialist",
+      "Social Policy Analyst",
+      "Community Development Officer",
+      "Outreach Coordinator",
+      "Research Officer",
+      "Population Analyst"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Arts in Political Studies",
+    "code": "BA-PolStud",
+    "minAPS": 25,
+    "requirements": {
+      "English": 4,
+      "Additional Language": "––",
+      "Additional Subjects": "to reach APS 25"
+    },
+    "jobs": [
+      "Political Analyst",
+      "Politician"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Arts (Languages stream)",
+    "code": "BA-Lang",
+    "minAPS": 25,
+    "requirements": {
+      "English": 3,
+      "Another Language": "4 or 5",
+      "Additional Subjects": "to reach APS 25"
+    },
+    "jobs": [
+      "Language Practitioner"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Arts (Translation & Linguistics stream)",
+    "code": "BA-TransLing",
+    "minAPS": 25,
+    "requirements": {
+      "English": 3,
+      "Another Language": "4 or 5",
+      "Additional Subjects": "to reach APS 25"
+    },
+    "jobs": [
+      "Translator",
+      "Interpreter",
+      "Bilingual Expert"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Arts (Performing Arts stream)",
+    "code": "BA-PerfArts",
+    "minAPS": 25,
+    "requirements": {
+      "English": 3,
+      "Another Language": "4 or 5",
+      "Additional Subjects": "to reach APS 25"
+    },
+    "jobs": [
+      "Performing Artist",
+      "Dramatist",
+      "Script Writer"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Information Studies",
+    "code": "BInfSt",
+    "minAPS": 25,
+    "requirements": {
+      "English": 4,
+      "Another Language": "4 or 5",
+      "Additional Subjects": "to reach APS 25"
+    },
+    "jobs": [
+      "Indexer",
+      "Abstracter",
+      "Information Consultant",
+      "Information Analyst",
+      "Information Specialist",
+      "Librarian"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Arts in Communication Studies",
+    "code": "BA-CommStud",
+    "minAPS": 25,
+    "requirements": {
+      "English": 3,
+      "Another Language": "4 or 5",
+      "Additional Subjects": "to reach APS 25"
+    },
+    "jobs": [
+      "Public Relations Officer",
+      "Communications Practitioner",
+      "Marketing Manager",
+      "Sales Promoter"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Arts in Media Studies",
+    "code": "BA-MediaStud",
+    "minAPS": 25,
+    "requirements": {
+      "English": 3,
+      "Another Language": "4 or 5",
+      "Additional Subjects": "to reach APS 25"
+    },
+    "jobs": [
+      "Radio Broadcaster",
+      "Newspaper & Magazine Editor",
+      "Journalist",
+      "Radio & Film Producer",
+      "Marketing Manager",
+      "Radio & TV Announcer",
+      "Information Technologist",
+      "Media Economist"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Arts in Media Studies (Extended Curriculum Programme)",
+    "code": "BA-MediaStud-ECP",
+    "minAPS": 23,
+    "requirements": {
+      "English": 4,
+      "Another Language": 4,
+      "Additional Subjects": "to reach APS 23"
+    },
+    "jobs": [
+      "Radio Broadcaster",
+      "Newspaper & Magazine Editor",
+      "Journalist",
+      "Radio & Film Producer",
+      "Marketing Manager",
+      "Radio & TV Announcer",
+      "Information Technologist",
+      "Media Economist"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Social Work",
+    "code": "BSW",
+    "minAPS": 23,
+    "requirements": {
+      "English": 4,
+      "Additional Language": "4 or 5"
+    },
+    "jobs": [
+      "Social Worker",
+      "Counsellor",
+      "Employee Assistance Practitioner"
+    ],
+    "campus": "Turfloop"
+  },
+{
+    "name": "BSc in Physical & Mineral Sciences",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 5,
+      "Physical Sciences": 5
+    },
+    "jobs": [
+      "Physicist",
+      "Chemical Industry",
+      "Analytical & Production Laboratories",
+      "Consultant",
+      "Industrial Process Manager",
+      "Metallurgist"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc in Physical & Mineral Sciences (Extended Curriculum Programme)",
+    "code": "",
+    "minAPS": 22,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4,
+      "Physical Sciences": 4,
+      "Life Sciences": 3
+    },
+    "jobs": [
+      "Physicist",
+      "Chemical Industry",
+      "Analytical & Production Laboratories",
+      "Consultant",
+      "Industrial Process Manager",
+      "Metallurgist"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc in Geology",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 5,
+      "Physical Sciences": 5
+    },
+    "jobs": [
+      "Geologist",
+      "Environmental Scientist",
+      "Earth Scientist",
+      "Hydrologist",
+      "Mining Specialist",
+      "Regional Planning and Development",
+      "Mineralogist",
+      "Palaeontologist",
+      "Geophysicist",
+      "Geochemist"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Accountancy (BAcc)",
+    "code": "",
+    "minAPS": 30,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4
+    },
+    "jobs": [
+      "Management Accountant",
+      "Internal Auditor",
+      "Tax Consultant",
+      "Business Entrepreneur",
+      "Accountant"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Commerce in Accountancy (BCom Accountancy)",
+    "code": "",
+    "minAPS": 28,
+    "requirements": {
+      "English": 3,
+      "Mathematics": 4
+    },
+    "jobs": [
+      "Internal Auditor",
+      "Consultant",
+      "Business Entrepreneur",
+      "Accountant"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Commerce in Accountancy (Extended Curriculum Programme)",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4
+    },
+    "jobs": [
+      "Internal Auditor",
+      "Consultant",
+      "Business Entrepreneur",
+      "Accountant"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Commerce in Economics (BCom Economics)",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 4,
+      "Mathematics/Economics": 3
+    },
+    "jobs": [
+      "Economist",
+      "Consultant",
+      "Business Entrepreneur"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Commerce in Economics (Extended Curriculum Programme)",
+    "code": "",
+    "minAPS": 22,
+    "requirements": {
+      "English": 4,
+      "Mathematics/Economics": 3,
+      "Additional Subject": 4
+    },
+    "jobs": [
+      "Economist",
+      "Consultant",
+      "Business Entrepreneur"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Administration (BAdmin)",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 3
+    },
+    "jobs": [
+      "Local Government Practitioner",
+      "Public Relations Practitioner",
+      "Consultant"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Administration in Local Government",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 3
+    },
+    "jobs": [
+      "Project Manager",
+      "Local Government Officer",
+      "Consultant"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Development in Planning and Management (BDev)",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 3,
+      "Mathematics": 3,
+      "Additional Subject": 4
+    },
+    "jobs": [
+      "Development & Environmental Manager",
+      "Facilitator",
+      "Planner",
+      "Development Project Designer"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Laws (LLB)",
+    "code": "",
+    "minAPS": 30,
+    "requirements": {
+      "English": 5
+    },
+    "jobs": [
+      "Judge",
+      "Magistrate",
+      "Advocate",
+      "Attorney",
+      "Director of Public Prosecution",
+      "Registrar/Master of the High Court",
+      "Legal Advisor",
+      "Legal Administrative Officer",
+      "Labour Consultant",
+      "Commissioner"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Laws (LLB) (Extended Curriculum Programme)",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 5
+    },
+    "jobs": [
+      "Judge",
+      "Magistrate",
+      "Advocate",
+      "Attorney",
+      "Director of Public Prosecution",
+      "Registrar/Master of the High Court",
+      "Legal Advisor",
+      "Legal Administrative Officer",
+      "Labour Consultant",
+      "Commissioner"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Agricultural Management (BAgricMan)",
+    "code": "",
+    "minAPS": 24,
+    "requirements": {
+      "English": 3,
+      "Mathematics": 3,
+      "Physical Sciences": 4,
+      "Life Sciences": 4
+    },
+    "jobs": [
+      "Agricultural Extension Officer",
+      "Agricultural Officer",
+      "Farm Manager",
+      "Agriculture Technician",
+      "Research Assistant"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Agriculture (Agricultural Economics)",
+    "code": "",
+    "minAPS": 24,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4,
+      "Physical Sciences": 4
+    },
+    "jobs": [
+      "Agricultural Economist",
+      "Agri-Business Manager",
+      "Agricultural Policy Analyst",
+      "Farm Manager",
+      "Consultant"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Agriculture (Plant Production)",
+    "code": "",
+    "minAPS": 24,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4,
+      "Physical Sciences": 4,
+      "Life Sciences": 4
+    },
+    "jobs": [
+      "Agronomist",
+      "Plant Breeder",
+      "Farm Manager",
+      "Consultant"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Agriculture (Animal Production)",
+    "code": "",
+    "minAPS": 24,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4,
+      "Physical Sciences": 4,
+      "Life Sciences": 4
+    },
+    "jobs": [
+      "Marketing Officer (Livestock Products)",
+      "Livestock Scientist",
+      "Animal Breeder & Nutritionist",
+      "Farm Manager",
+      "Consultant"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Agriculture (Soil Science)",
+    "code": "",
+    "minAPS": 25,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4,
+      "Physical Sciences": 5,
+      "Life Sciences": 4
+    },
+    "jobs": [
+      "Soil Scientist",
+      "Laboratory Manager",
+      "Soil Analyst"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Environmental & Resource Studies",
+    "code": "",
+    "minAPS": 24,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4,
+      "Physical Sciences": 4,
+      "Life Sciences": 4
+    },
+    "jobs": [
+      "Environmental Officer",
+      "Development Planner",
+      "Cartographer"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Water & Sanitation Sciences",
+    "code": "",
+    "minAPS": 24,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 5,
+      "Physical Sciences": 5,
+      "Life Sciences": 4
+    },
+    "jobs": [
+      "Water & Sanitation Scientist",
+      "Community Water Supply Project Planner",
+      "Community Sanitation Project Manager",
+      "Water Catchment Manager",
+      "Water Resources Planner",
+      "Water Treatment Plant Manager",
+      "Wastewater Treatment Manager"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Mathematical & Computer Sciences",
+    "code": "",
+    "minAPS": 24,
+    "requirements": {
+      "English": 3,
+      "Mathematics": 5
+    },
+    "jobs": [
+      "Systems Analyst",
+      "Computer Programmer",
+      "Network Specialist",
+      "Project Manager",
+      "Logistics Specialist",
+      "Financial Analyst",
+      "Insurance Underwriter"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Mathematical Sciences (Extended Curriculum Programme)",
+    "code": "",
+    "minAPS": 22,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4
+    },
+    "jobs": [
+      "Systems Analyst",
+      "Computer Consultant",
+      "Computer Programmer",
+      "Computer Modelling Consultant",
+      "Aerospace Engineer",
+      "Network Specialist",
+      "Statistician"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Molecular & Life Sciences",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 3,
+      "Mathematics": 5,
+      "Physical Sciences": 5,
+      "Life Sciences": 4
+    },
+    "jobs": [
+      "Biotechnologist",
+      "Bio-informatics Specialist",
+      "Environmental Health & Occupational Hygienist",
+      "Environmental Manager",
+      "Industrial Biochemist",
+      "Industrial Microbiologist",
+      "Entomologist"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Life Sciences (Extended Curriculum Programme)",
+    "code": "",
+    "minAPS": 22,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4,
+      "Physical Sciences": 4,
+      "Life Sciences": 3
+    },
+    "jobs": [
+      "Biotechnologist",
+      "Bio-informatics Specialist",
+      "Environmental Health & Occupational Hygienist",
+      "Environmental Manager",
+      "Industrial Biochemist",
+      "Industrial Microbiologist",
+      "Entomologist"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "MBChB (Medicine & Surgery)",
+    "code": "MBChB",
+    "minAPS": 27,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 5,
+      "Physical Sciences": 5,
+      "Life Sciences": 5,
+      "Additional Subject 1": 4,
+      "Additional Subject 2": 4
+    },
+    "jobs": [
+      "General Medical Practitioner",
+      "Medical Researcher"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Dietetics",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4,
+      "Physical Sciences": 5,
+      "Life Sciences": 5,
+      "Additional Subject 1": 4,
+      "Additional Subject 2": 4
+    },
+    "jobs": [
+      "Hospital Dietician",
+      "Community Dietician",
+      "Food Service Manager",
+      "Consultant (Food Production)",
+      "Medical Representative (Nutrition)",
+      "Private Practice/Researcher"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BOptom (Optometry)",
+    "code": "",
+    "minAPS": 27,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 5,
+      "Physical Sciences": 5,
+      "Life Sciences": 5,
+      "Additional Subject 1": 4,
+      "Additional Subject 2": 4
+    },
+    "jobs": [
+      "Optometrist (Private/Public)",
+      "Vision Scientist"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "BSc Medical Sciences",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4,
+      "Physical Sciences": 5,
+      "Life Sciences": 5,
+      "Additional Subject 1": 4,
+      "Additional Subject 2": 4
+    },
+    "jobs": [
+      "Medical Scientist",
+      "Laboratory Researcher"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Nursing (BNurs)",
+    "code": "",
+    "minAPS": 26,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 4,
+      "Physical Sciences": 5,
+      "Life Sciences": 5,
+      "Additional Subject 1": 4,
+      "Additional Subject 2": 4
+    },
+    "jobs": [
+      "General Nurse",
+      "Psychiatric Nurse",
+      "Community Nurse",
+      "Mid-Wife",
+      "Occupational Health Nurse",
+      "Old Age Home Nurse",
+      "Home-Based Care Nurse",
+      "Hospital Nurse",
+      "Pharmaceutical Sales",
+      "Insurance/Medical Aid Consultant"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Pharmacy (BPharm)",
+    "code": "",
+    "minAPS": 27,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 5,
+      "Physical Sciences": 5,
+      "Life Sciences": 5,
+      "Additional Subject 1": 4,
+      "Additional Subject 2": 4
+    },
+    "jobs": [
+      "Retail Pharmacist",
+      "Medicine Control Officer",
+      "Government Health Officer",
+      "Industrial Pharmacist",
+      "Private Practice Pharmacist"
+    ],
+    "campus": "Turfloop"
+  },
+  {
+    "name": "Bachelor of Commerce in Human Resource Management (Extended Curriculum Programme)",
+    "code": "",
+    "minAPS": 22,
+    "requirements": {
+      "English": 4,
+      "Mathematics": 3
+    },
+    "jobs": [
+      "Marketing Officer",
+      "Human Resource Practitioner",
+      "Purchasing Officer",
+      "Business Entrepreneur"
+    ],
+    "campus": "Turfloop"
+  }

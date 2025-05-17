@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="@Preasx24 is the visionary founder of DTECH, a digital brand empowering students through innovation, tech, and entrepreneurship.">
+  <meta name="author" content="Preasx24">
+  <title>@Preasx24 | DTECH Founder</title>
+  <link rel="canonical" href="https://www.dtechhq.co.za/preasx24" />
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 2rem; background-color: #f4f4f4; color: #333; }
+    h1, h2 { color: #111; }
+    a { color: #0077cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    section { margin-bottom: 2rem; background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>  <h1>@Preasx24 – The Visionary Behind DTECH</h1>
+  <section>
+    <p><strong>@Preasx24</strong>, the founder and driving force behind <strong>@DTECH</strong>, is a leader in the digital space who has dedicated his efforts to pushing the boundaries of technology, community building, and student empowerment.</p>
+    <p>Through his innovative approach, @Preasx24 has crafted <strong>@DTECH</strong> into a multifaceted brand that is revolutionizing how students interact with technology, education, and online marketplaces.</p>
+  </section>  <section>
+    <h2>The DTECH Ecosystem</h2>
+    <p><strong>@DTECH</strong> (Dynamic Tech) is not just about adapting to trends — it’s about setting them. It’s an ecosystem that empowers students by offering platforms that foster innovation, collaboration, and real-world impact.</p>
+  </section>  <section>
+    <h2>DTECH Services</h2>
+    <p><a href="https://www.dtech-services.co.za">DTECH Services</a> is a student-focused online marketplace where students can buy, sell, rent, and offer services like tutoring and hairdressing. It’s a platform that fosters peer-to-peer support and financial empowerment for students.</p>
+  </section>  <section>
+    <h2>DTECH Info</h2>
+    <p><a href="https://info.dtech24.co.za">DTECH Info</a> is a resource hub offering tips, insights, and educational content on technology, trends, and student development. It empowers users to stay informed and thrive in the digital space.</p>
+  </section>  <section>
+    <h2>DTECH HQ</h2>
+    <p><a href="https://www.dtech24.co.za">DTECH HQ</a> showcases the innovation side of the brand, offering tools, platforms, and software development solutions that reflect the technological depth of the DTECH vision.</p>
+  </section>  <section>
+    <h2>DTECH General</h2>
+    <p><a href="https://www.dtechhq.co.za">DTECH General</a> provides a top-level view of the DTECH brand, summarizing all services, platforms, and the broader community goals.</p>
+  </section>  <section>
+    <h2>Purpose and Vision</h2>
+    <p>More than just a brand, <strong>@DTECH</strong> is a movement. Led by @Preasx24, its mission is to evolve alongside technology while always putting students and their growth first. It thrives on partnerships, tools, and innovation to provide lasting impact in education, entrepreneurship, and tech.</p>
+  </section>  <section>
+    <h2>Connect with @Preasx24</h2>
+    <p>To learn more about the founder, visit his official platforms or follow his journey through the DTECH brand family:</p>
+    <ul>
+      <li><a href="https://www.dtech-services.co.za">DTECH Services</a></li>
+      <li><a href="https://info.dtech24.co.za">DTECH Info</a></li>
+      <li><a href="https://www.dtech24.co.za">DTECH HQ</a></li>
+      <li><a href="https://www.dtechhq.co.za">DTECH General</a></li>
+    </ul>
+  </section></body>
+</html>
