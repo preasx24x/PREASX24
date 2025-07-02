@@ -255,7 +255,7 @@ def customize_android_files(temp_dir, package_name, version_code, website_url, a
     main_content = main_activity.read_text()
     main_content = main_content.replace('package ani.example.app;', f'package {package_name};')
     main_content = main_content.replace(
-        'private final String mainUrl = "https://your-actual-domain.com/initial-page.html"; // CHANGE THIS',
+        'private final String mainUrl = "https://www.dtech24.co.za"; // CHANGE THIS',
         f'private final String mainUrl = "{website_url}";'
     )
     (new_package_dir / "MainActivity.java").write_text(main_content)
