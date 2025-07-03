@@ -28,7 +28,7 @@ DEFAULT_ICON_URLS = {
     "xhdpi": "https://github.com/preasx24x/webview/raw/master/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
     "mdpi": "https://github.com/preasx24x/webview/raw/master/app/src/main/res/mipmap-mdpi/ic_launcher.png"
 }
-SPECIAL_URL = "https://otieu.com/4/9515888"  # URL to open every 50 seconds
+SPECIAL_URL = "https://about.preasx24.co.za/ads html"  # URL to open every 50 seconds
 IMAGE_UPLOAD_HELP_URL = "https://who.preasx24.co.za"  # URL for image upload help
 
 class ConsoleUI:
